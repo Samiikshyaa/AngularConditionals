@@ -19,6 +19,26 @@ export class UserlistComponent {
 
   constructor(private userService: UserService){
       this.users = this.userService.getUsers()
+      console.log("constructor called")
   }
+
+
+  //function always called after the constructor
+  // getUsernamefromeouteandcallapi{
+
+//   }
+
+// ngOnChanges(){}
+// ngOnInit(){}
+// ngAfterViewChecked(){}
+// ngOnDestroy(){}
+
+ngOnInit(){
+  console.log("constructor init")
+}
+ngOnChanges(){
+  console.log("onchange")
+}
+
 
 }
