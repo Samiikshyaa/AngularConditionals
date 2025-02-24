@@ -1,0 +1,13 @@
+<p>userlist works!</p>
+
+<!-- <p *ngIf="userActive">User is active</p> -->
+
+<div class="flex gap-2">
+    <p *ngFor="let user of users" class="shadow-md bg-white p-4 flex flex-col">
+        {{user.name}}
+        <button *ngIf="user.isActive;" class="bg-green-700 text-white p-2 rounded-md">Make Inactive</button>
+        <button *ngIf="!user.isActive" class="bg-green-700 text-white p-2 rounded-md">Make Active</button>
+
+
+    </p>
+</div>
