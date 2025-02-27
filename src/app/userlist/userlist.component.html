@@ -2,12 +2,45 @@
 
 <!-- <p *ngIf="userActive">User is active</p> -->
 
-<div class="flex gap-2">
-    <p *ngFor="let user of users" class="shadow-md bg-white p-6 flex flex-col">
+<!-- <div class="flex gap-2">
+    <div *ngFor="let user of users" class="shadow-md bg-white p-6 flex flex-col">
         {{user.name}}
-        <button *ngIf="user.isActive;" class="bg-green-700 text-white p-2 rounded-md">Make Inactive</button>
-        <button *ngIf="!user.isActive" class="bg-green-700 text-white p-2 rounded-md">Make Active</button>
+        <!-- <button *ngIf="user.isActive;" class="bg-green-700 text-white p-2 rounded-md">Make Inactive</button>
+        <button *ngIf="!user.isActive" class="bg-green-700 text-white p-2 rounded-md">Make Active</button> -->
 
+            <!-- <div [ngSwitch]="status">
+                <p *ngSwitchCase="'Active'">Active</p>
+                <p *ngSwitchCase="'Inactive'">Inactivective</p>
+                <p *ngSwitchDefault>Unknown</p>
+            </div>
 
-    </p>
+            @for(user of users; track $index){
+                <div>
+                    <p>{{user.name}}</p>
+                    <p>{{user.isActive}}</p>
+                </div>
+            }
+
+            @switch (status) {
+                @case("Active"){
+                    <div></div>
+                }
+            } -->
+<!-- </div>
+</div>
+
+<div>
+    @if(status === 'X'){
+        <div>hello</div>
+    }
+    @else {
+        <div>Hi</div>
+    }
+</div>  -->
+
+<div class="flex gap-2 flex-wrap">
+    <div *ngFor="let user of users" class="shadow-md bg-white p-4 flex flex-col ">
+        {{user.login}}
+        <img [src]="user.avatar_url" [alt]="user.login">
+    </div>
 </div>
