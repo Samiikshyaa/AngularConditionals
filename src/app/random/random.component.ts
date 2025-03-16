@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './random.component.css'
 })
 export class RandomComponent {
+  value = "xyz"
+
+  fun(){
+    console.log("hello from parent")
+  }
 
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 
@@ -18,7 +19,7 @@ export interface IUser{
 })
 export class UserService {
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private route:ActivatedRoute){} //service injection
   backendUrl = 'https://api.github.com/users'
 
   getUsers(): Observable<IUser[]>{

@@ -18,6 +18,10 @@ export const routes: Routes = [
             component: RandomComponent
             },
             {
+                path:'skill',
+                redirectTo: 'search'
+            },
+            {
             path:'education',
             component: Random2Component
             }
@@ -26,5 +30,8 @@ export const routes: Routes = [
     {
         path:"search",
         component: UsersearchComponent
+    },{
+        path:"*",
+        redirectTo: '' //home ma redirect
     }
 ];
